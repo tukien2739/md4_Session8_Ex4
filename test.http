@@ -1,0 +1,28 @@
+### TEST 1 - Upload Avatar
+POST http://localhost:8080/api/files/upload
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="image"; filename="test.jpg"
+Content-Type: image/jpeg
+
+< ./test.jpg
+--MyBoundary--
+
+### KIEM TRA API UPLOAD CO TON TAI
+POST http://localhost:8080/api/files/upload
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary--
+
+### TEST 2 - UPLOAD AVATAR THANH CONG
+
+POST http://localhost:8080/api/files/upload
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="image"; filename="test.jpg"
+Content-Type: image/jpeg
+
+< ./test.jpg
+--MyBoundary--
